@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Masa Lattafa Perfume</title>
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <style>
+    body {
+      background-color: #121212;
+      color: #fff;
+      font-family: sans-serif;
+      padding: 20px;
+      margin: 0;
+    }
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background-color: #1e1e1e;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+    img {
+      max-width: 100%;
+      border-radius: 12px;
+    }
+    h1 {
+      font-size: 24px;
+      margin-top: 20px;
+    }
+    p {
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    select, button {
+      margin-top: 15px;
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+    }
+    select {
+      background-color: #2a2a2a;
+      color: #fff;
+    }
+    button {
+      background-color: #bb86fc;
+      color: #fff;
+      cursor: pointer;
+    }
+    .toast {
+      visibility: hidden;
+      min-width: 200px;
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      border-radius: 8px;
+      padding: 12px;
+      position: fixed;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1;
+    }
+    .toast.show {
+      visibility: visible;
+      animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    }
+    @keyframes fadein {
+      from { bottom: 20px; opacity: 0; }
+      to { bottom: 30px; opacity: 1; }
+    }
+    @keyframes fadeout {
+      from { bottom: 30px; opacity: 1; }
+      to { bottom: 20px; opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="photo.jpg" alt="Masa Lattafa Perfume">
+    <h1>Masa Lattafa Perfumes</h1>
+    <p>Аромат для мужчин и женщин из группы цветочные фруктовые.<br>
+    Верхние ноты: Манго, Шафран, Лимон, Розовый перец.<br>
+    Средние ноты: Лист фиалки, Османтус, Цветок апельсина, Имбирь.<br>
+    Базовые ноты: Минеральные ноты, Замша, Амбра, Пачули.</p>
+
+    <label for="volume">Выберите объём:</label>
+    <select id="volume">
+      <option value="3ml">3 мл — 150₽</option>
+      <option value="6ml">6 мл — 250₽</option>
+      <option value="10ml">10 мл — 400₽</option>
+      <option value="15ml">15 мл — 600₽</option>
+      <option value="20ml">20 мл — 800₽</option>
+      <option value="30ml">30 мл — 1100₽</option>
+    </select>
+
+    <button onclick="addToCart()">Добавить в корзину</button>
+  </div>
+
+  <div id="toast" class="toast">Товар добавлен в корзину</div>
+
+  <script>
+    Telegram.WebApp.expand();
+
+    function addToCart() {
+      const toast = document.getElementById("toast");
+      toast.className = "toast show";
+      setTimeout(() => { toast.className = toast.className.replace("show", ""); }, 3000);
+    }
+  </script>
+</body>
+</html>

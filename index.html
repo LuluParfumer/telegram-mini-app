@@ -1,1 +1,32 @@
-<!DOCTYPE html><html lang="ru"><head><meta charset="UTF-8"><title>Витрина</title></head><body style="background:#121212;color:white"><h1>🌸 Lulu Parfumer</h1><p>Финальная витрина загружена.</p></body></html>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Telegram Mini App</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script defer src="main.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <h1>Ароматы</h1>
+        <div id="product-list"></div>
+        <div id="cart">
+            <h2>Корзина</h2>
+            <ul id="cart-items"></ul>
+            <p>Итого: <span id="total">0₽</span></p>
+            <button id="checkout-btn">Оформить заказ</button>
+        </div>
+    </div>
+    <div id="order-form" class="hidden">
+        <h2>Оформление заказа</h2>
+        <form id="form">
+            <input type="text" placeholder="Имя" name="name" required>
+            <input type="text" placeholder="Telegram username" name="username" required>
+            <input type="text" placeholder="Адрес" name="address" required>
+            <input type="text" placeholder="Телефон" name="phone" required>
+            <button type="submit">Отправить</button>
+        </form>
+    </div>
+</body>
+</html>

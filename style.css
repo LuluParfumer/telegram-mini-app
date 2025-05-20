@@ -1,0 +1,22 @@
+
+body {
+    background-color: #111;
+    color: #fff;
+    font-family: sans-serif;
+    padding: 20px;
+}
+.hidden { display: none; }
+#product-list > div {
+    border: 1px solid #444;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+button {
+    background: #333;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}

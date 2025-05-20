@@ -5,18 +5,40 @@ body {
     font-family: sans-serif;
     padding: 20px;
 }
-.hidden { display: none; }
+h1, h2 {
+    color: #f0f0f0;
+}
 #product-list > div {
-    border: 1px solid #444;
-    padding: 10px;
-    margin-bottom: 10px;
+    background: #222;
     border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
 }
 button {
-    background: #333;
-    color: white;
-    padding: 10px;
+    background: #444;
+    color: #fff;
+    padding: 8px 12px;
+    margin: 5px 3px 0 0;
     border: none;
     border-radius: 8px;
     cursor: pointer;
+}
+button:hover {
+    background: #666;
+}
+.hidden {
+    display: none;
+}
+#cart {
+    background: #1a1a1a;
+    padding: 15px;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+
+.product-img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 12px;
+    margin-bottom: 10px;
 }
